@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Emp Details</title>
+   </head>
+   <body>
+         <h2>Employee Details</h2>
+         <form action="/add" method="POST">
+         <label>Emp Code</label>
+         <input type="number" name="emp_code" placeholder="emp code..."><br>
+         <label>Emp Name</label>
+         <input type="text" name= "emp_name" placeholder="emp name..."><br>
+         <label>DoB</label>
+         <input type="date" name="dob" placeholder="dob.."><br>
+         <label>DoJ</label>
+         <input type="date" name="doj" placeholder="doj.."><br>
+         <label>DoA</label>
+         <input type="date" name="doa" placeholder="doa.."><br>
+         <label>Email</label>
+         <input type="text" name="email" placeholder="email.."><br>
+         <button type="submit">Add</button>
+      </form>
+      <h3>Employee Table</h3>
+
+
+      <br>
+      <table border="1px">
+         <thead>
+            <th>Emp Code</th>
+            <th>Emp Name</th>
+            <th>DoB</th>
+            <th>DoJ</th>
+            <th>DoA</th>
+            <th>Email</th>
+            <th>Action</th>
+            <th>Action</th>
+         </thead>
+         {% for data in profiles %}
+         <tbody>
+            <td>{{data.emp_code}}</td>
+            <td>{{data.emp_name}}</td>
+            <td>{{data.dob}}</td>
+            <td>{{data.doj}}</td>
+            <td>{{data.doa}}</td>
+            <td>{{data.email}}</td>
+<!--            <td><a href="/delete/{{data.emp_code}}" type="button">Delete</a></td>-->
+            <td>
+               <a href="/edit/{{data.emp_code}}/update" type="button">Edit</a>
+            </td>
+            <td>
+                <a href="/delete/{{data.emp_code}}" type="button">Delete</a>
+            </td>
+         </tbody>
+         {% endfor%}
+      </table>
+        <button><a href="/wish_table" type="button">Wish</a></button>
+
+   </body>
+</html>
