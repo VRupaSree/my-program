@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title> edit </title>
+</head>
+<body>
+<h3>Update Employee Profile form</h3>
+<form action="/edit/{{data.emp_code}}/update" method="POST">
+    <table>
+        <tr><td>emp_code</td><td><input type="number" value="{{ data.emp_code }}" name="emp_code" placeholder="emp code"></td></tr>
+        <tr><td>emp_name</td><td><input type="text"  value="{{ data.emp_name }}"name="emp_name" placeholder="emp name"></td></tr>
+        <tr><td>dob</td><td><input type="date" value="{{ data.dob }}"name="dob" placeholder="dob"></td></tr>
+        <tr><td>doj</td><td><input type="date" value="{{ data.doj }}"name="doj" placeholder="doj"></td></tr>
+        <tr><td>doa</td><td><input type="date" value="{{ data.doa }}" name="doa" placeholder="doa"></td></tr>
+       <tr><td>email</td><td><input type="text" value="{{ data.email }}"name="email" placeholder="email"></td></tr>
+        <tr><td><input type="submit" name="Update"></td></tr>
+    </table>
+</form>
+</body>
+</html>
