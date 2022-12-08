@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>data</title>
+</head>
+<body>
+    <center><h3 class="text-center alert alert-info">Employee Data</h3>
+    <table class="table table-hover" width="1000px" border="1px">
+        <colgroup>
+            <col span="2">
+          </colgroup>
+        <tr>
+            <th>Birthday</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        {% for emp in bday_obj %}
+        <tr>
+            <td>{{emp.emp_name}}</td>
+            <td>{{emp.email}}</td>
+            <td><a href="/email">send</a></td>
+        </tr>
+        {% endfor %}
+    </table></center>
+    <center><h3 class="text-center alert alert-info">Employee Data</h3>
+        <table class="table table-hover" width="1000px" border="1px">
+            <colgroup>
+                <col span="2">
+              </colgroup>
+            <tr>
+                <th>joining</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+            {% for emp in jday_obj %}
+            <tr>
+                <td>{{emp.emp_name}}</td>
+                <td>{{emp.email}}</td>
+                <td><a href="/email">send</a></td>
+            </tr>
+            {% endfor %}
+        </table></center>
+        <center><h3 class="text-center alert alert-info">Employee Data</h3>
+            <table class="table table-hover" width="1000px" border="1px">
+                <colgroup>
+                    <col span="2">
+                  </colgroup>
+                <tr>
+                    <th>annversary</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+                {% for emp in Aday_obj %}
+                <tr>
+                    <td>{{emp.emp_name}}</td>
+                    <td>{{emp.email}}</td>
+                    <td><a href="/email">send</a></td>
+                </tr>
+                {% endfor %}
+            </table></center>
+</body>
+</html>
